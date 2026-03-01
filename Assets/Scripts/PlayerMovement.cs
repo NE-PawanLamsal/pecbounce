@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -68,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
 			state = MovementState.idle;
 		}
 		
-		if (rb.velocity.y > .1f )
+		if (rb.velocity.y > .1f)
 		{
 			state = MovementState.jumping;
 		}
@@ -76,10 +74,6 @@ public class PlayerMovement : MonoBehaviour
 		{
 			state = MovementState.falling;
 		}
-		else
-		{
-			state = MovementState.idle;
-		}		
 
 			anim.SetInteger("state",(int)state);
 	}
