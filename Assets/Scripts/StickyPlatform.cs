@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class StickyPlatform : MonoBehaviour
 {
@@ -13,7 +11,10 @@ public class StickyPlatform : MonoBehaviour
    }
    private void OnTriggerExit2D(Collider2D collision)
    {
-	   collision.gameObject.transform.SetParent(null);
+	   if (collision.gameObject.CompareTag("Player"))
+	   {
+		   collision.gameObject.transform.SetParent(null);
+	   }
    }
    
 }

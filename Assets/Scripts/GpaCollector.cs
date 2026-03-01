@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class GpaCollector : MonoBehaviour
@@ -17,7 +15,7 @@ public class GpaCollector : MonoBehaviour
 			collectSound.Play();
 			Destroy(collision.gameObject);
 			gpa = gpa + 0.1f;
-			gpaText.text = "GPA : "+gpa;
+			gpaText.text = "GPA : " + gpa.ToString("F1");
 		}	
 	}
 	
